@@ -47,16 +47,20 @@ const Home = ({ searchQuery, data, isLoggedIn, onRequireLogin }) => {
       // --- LOGIKA FILTER BULANAN ---
       // Agar karya muncul, kita tampilkan SEMUA yang statusnya approved.
       // Jika ingin filter bulan ini aktif, gunakan kode ini:
-      /*
+
       const today = new Date();
-      const currentMonthShort = today.toLocaleString('id-ID', { month: 'short' });
+      const currentMonthShort = today.toLocaleString("id-ID", {
+        month: "short",
+      });
       const currentYear = today.getFullYear();
-      
-      const thisMonthData = realData.filter(art => 
-        art.date && art.date.includes(currentMonthShort) && art.date.includes(String(currentYear))
+
+      const thisMonthData = realData.filter(
+        (art) =>
+          art.date &&
+          art.date.includes(currentMonthShort) &&
+          art.date.includes(String(currentYear))
       );
       setArtworks(thisMonthData);
-      */
 
       // SAAT INI: Tampilkan Semua Approved (Agar hasil upload Anda terlihat)
       setArtworks(realData);
